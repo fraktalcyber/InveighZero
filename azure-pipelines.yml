@@ -36,6 +36,7 @@ steps:
 
 - task: AzureFileCopy@4
   inputs:
+    SourcePath: '$(Build.ArtifactStagingDirectory)'
     azureSubscription: 'Fraktal production subscription(4205bd76-6fb8-40a2-b644-6d29f7cdcf93)'
     Destination: 'AzureBlob'
     storage: 'frkoffensivetools'
